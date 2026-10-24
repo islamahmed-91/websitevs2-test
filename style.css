@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap');
+
+
+body {
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+
+::selection {
+    background-color: #f4f6f8;
+    color: #6b6760;
+}
+
+
+
+/*NAVBAR*/
+.navbar {
+
+    background: linear-gradient(to bottom, #12384a, #0d7c86);
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-content {
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.navbar img {
+    height: 24px;
+}
+
+.menu-button {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 24px;
+    background-color: transparent;
+    border: 0.5px solid #c4c4c4;
+    cursor: pointer;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.menu-button i {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*HERO*/
+
+.hero-container {
+    padding: 48px 24px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+
+    background: url(images/hero.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-color: rgba(0, 0, 0, 0.48);
+    background-blend-mode: multiply;
+}
+
+.hero-text h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    color: #ffffff;
+
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+.hero-text p {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 24px;
+    color: #ffffff;
+
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+
+
+
+
+/*SERVICES*/
+.services {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    padding: 24px 12px;
+    border-radius: 12px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
+    border: 0.5px solid #c4c4c4;
+    border-radius: 12px;
+    padding: 8px 24px;
+    background-color: #ffffff;
+    text-decoration: none;
+}
+
+
+.separate-line {
+    width: 0.5px;
+    height: 52px;
+    background-color: #c4c4c4;
+}
+
+.service-ico i {
+    font-size: 28px;
+    color: #0d7c86;
+}
+
+
+.card-texts {
+    line-height: 0;
+}
+
+
+
+.service-card h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    color: #0d7c86;
+}
+
+.service-card h2 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #6b6760;
+}
+
+
+
+
+
+
+
+
+
+
+/*DISCOUNTS*/
+.discounts {
+    width: 100%;
+    margin: auto;
+    background-color: #f4f6f8;
+}
+
+.discount-cards-container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 24px;
+}
+
+.discounts-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 4px;
+    padding-bottom: 12px;
+}
+
+.discounts-title i {
+    font-size: 24px;
+    color: #0d7c86;
+}
+
+
+.discounts-title h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0px;
+    color: #0d7c86;
+}
+
+
+.discount-card {
+
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    padding: 24px;
+    background-repeat: no-repeat;
+    max-height: 452px;
+    position: relative;
+
+
+
+    background-color: rgba(0, 0, 0, 0.12);
+    background-blend-mode: multiply;
+}
+
+
+
+
+.discount-card h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0px;
+    padding-bottom: 4px;
+}
+
+.discount-card h2 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0px;
+    padding-bottom: 4px;
+}
+
+
+
+.discount-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.discount-card .discount-button i {
+    font-size: 20px;
+}
+
+.discount-card .discount-button {
+    position: absolute;
+    bottom: 24px;
+
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0d7c86;
+    background-color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 24px;
+    text-decoration: none;
+}
+
+
+/*DISCOUNTS SIDER*/
+.discounts-slider-container {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.discounts-slider {
+    display: flex;
+    transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+    width: calc(100% + 12px);
+}
+
+
+.discounts-slider .discount-card {
+    min-width: calc(100% - 12px);
+    margin-right: 12px;
+    box-sizing: border-box;
+}
+
+/* Flipped margin for Arabic (RTL) */
+[dir="rtl"] .discounts-slider .discount-card {
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+
+
+
+
+
+
+/* BUCKET LIST */
+.bucket-list-container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 24px;
+}
+
+.bucket-list-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+}
+
+.bucket-list-title i {
+    font-size: 24px;
+    color: #0d7c86;
+    line-height: 1;
+}
+
+.bucket-list-title h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #0d7c86;
+    line-height: 1;
+}
+
+.bucket-list-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Dynamically Generated Destination Card */
+.bucket-list-container .destination-card {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 3 / 2;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+
+    background-color: rgba(0, 0, 0, 0.24);
+    background-blend-mode: multiply;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bucket-list-container .destination-card h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+.bucket-list-container .destination-card p {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    color: #ffffff;
+}
+
+.bucket-list-container .icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.bucket-list-container .icons a {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+}
+
+.bucket-list-container .hotels,
+.bucket-list-container .activities,
+.bucket-list-container .flights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 4px;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.bucket-list-container .icons i {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.bucket-list-container .icons h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+.footer-container {
+    background: linear-gradient(to bottom, #12384a, #0d7c86);
+    padding: 48px 24px;
+}
+
+.footer-content {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 4px;
+}
+
+.footer-container h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer-links a,
+.footer-links span {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-container h2 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ffffff;
+}

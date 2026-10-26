@@ -197,7 +197,7 @@ body {
 .discount-cards-container {
     max-width: 1440px;
     margin: auto;
-    padding: 24px;
+    padding: 12px 24px;
 }
 
 .discounts-title {
@@ -328,7 +328,7 @@ body {
 .bucket-list-container {
     max-width: 1440px;
     margin: auto;
-    padding: 24px;
+    padding: 12px 24px;
 }
 
 .bucket-list-title {
@@ -466,7 +466,7 @@ body {
 .worth-a-shot-container {
     max-width: 1440px;
     margin: auto;
-    padding: 24px;
+    padding: 12px 24px;
 }
 
 .worth-a-shot-title {
@@ -509,7 +509,7 @@ body {
 
 max-width: 1440px;
     margin: auto;
-    padding: 24px;
+    padding: 12px 24px;
 }
 
 

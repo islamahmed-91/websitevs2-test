@@ -20,7 +20,7 @@ body {
     background: linear-gradient(to bottom, #12384a, #0d7c86);
     width: 100%;
 
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 1000;
 }
@@ -192,7 +192,6 @@ body {
 .discounts {
     width: 100%;
     margin: auto;
-    background-color: #f4f6f8;
 }
 
 .discount-cards-container {

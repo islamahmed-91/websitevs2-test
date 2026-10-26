@@ -422,14 +422,12 @@ body {
     width: 100%;
     box-sizing: border-box;
 
-    background-color: rgba(255, 255, 255, 0.4);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+    background-color: #ffffff;
 }
 
 .bucket-list-container .icons i {
     font-size: 14px;
-    color: #ffffff;
+    color: #0d7c86;
     line-height: 1;
 }
 
@@ -439,7 +437,7 @@ body {
     font-weight: 300;
     margin: 0;
     padding: 0;
-    color: #ffffff;
+    color: #0d7c86;
     line-height: 1;
 }
 
@@ -447,6 +445,104 @@ body {
 
 
 
+
+
+
+/* WORTH A SHOT */
+
+.worth-a-shot-container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 24px;
+}
+
+.worth-a-shot-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+}
+
+
+.worth-a-shot-title i {
+    font-size: 24px;
+    color: #0d7c86;
+    line-height: 1;
+}
+
+.worth-a-shot-title h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #0d7c86;
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+/* CONTACT US */
+
+.contact-us-container {
+
+max-width: 1440px;
+    margin: auto;
+    padding: 24px;
+}
+
+
+.contact-us-card {
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+
+}
+
+
+.contact-us-title h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: #0d7c86;
+    padding-bottom: 4px;
+}
+
+.contact-us-title p {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    color: #0d7c86;
+    padding-bottom: 24px;
+}
+
+
+.contact-us-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.chat-button, .email-button {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 12px 24px;
+    color: #0d7c86;
+    font-size: 14px;
+    font-weight: 400;
+}
 
 
 

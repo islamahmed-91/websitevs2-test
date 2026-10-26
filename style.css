@@ -469,6 +469,10 @@ body {
     padding: 12px 24px;
 }
 
+.worth-a-shot-container a {
+    text-decoration: none;
+}
+
 .worth-a-shot-title {
     display: flex;
     flex-direction: row;
@@ -496,7 +500,7 @@ body {
 
 
 .worth-a-shot-card {
-    background: url(images/Burj\ Al\ Arab\ &\ Atlantis\ Jet\ Ski\ Tour.jpeg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 40%), url(images/Burj\ Al\ Arab\ &\ Atlantis\ Jet\ Ski\ Tour.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -506,6 +510,7 @@ body {
 
     background-color: rgba(0, 0, 0, 0.24);
     background-blend-mode: multiply;
+    
 }
 
 

@@ -48,7 +48,7 @@ body {
     padding: 8px 20px;
     border-radius: 24px;
     background-color: transparent;
-    border: 0.5px solid #c4c4c4;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
 
 
@@ -104,7 +104,7 @@ body {
 .hero-text p {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     padding-bottom: 24px;
     color: #ffffff;
 
@@ -129,7 +129,7 @@ body {
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     padding: 24px 12px;
-    border-radius: 12px;
+    border-radius: 24px;
 }
 
 .service-card {
@@ -138,7 +138,7 @@ body {
     justify-content: left;
     align-items: center;
     gap: 16px;
-    border: 0.5px solid #c4c4c4;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     padding: 8px 24px;
     background-color: #ffffff;
@@ -149,7 +149,7 @@ body {
 .separate-line {
     width: 0.5px;
     height: 52px;
-    background-color: #c4c4c4;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .service-ico i {
@@ -175,7 +175,7 @@ body {
 .service-card h2 {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     color: #6b6760;
 }
 
@@ -229,7 +229,7 @@ body {
     aspect-ratio: 3 / 4;
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
+    border-radius: 24px;
     padding: 24px;
     background-repeat: no-repeat;
     max-height: 452px;
@@ -296,7 +296,7 @@ body {
 .discounts-slider-container {
     overflow: hidden;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 24px;
 }
 
 .discounts-slider {
@@ -355,21 +355,30 @@ body {
     line-height: 1;
 }
 
-.bucket-list-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+/* BUCKET LIST SLIDER */
+.bucket-list-slider-container {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 24px;
 }
 
-/* Dynamically Generated Destination Card */
-.bucket-list-container .destination-card {
+.bucket-list-slider {
+    display: flex;
+    transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+    width: calc(100% + 12px);
+}
+
+.bucket-list-slider .destination-card {
+    min-width: calc(100% - 12px);
+    margin-right: 12px;
+    box-sizing: border-box;
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     aspect-ratio: 3 / 2;
-    border-radius: 12px;
+    border-radius: 24px;
     padding: 24px;
-    box-sizing: border-box;
 
     background-color: rgba(0, 0, 0, 0.24);
     background-blend-mode: multiply;
@@ -378,7 +387,13 @@ body {
     flex-direction: column;
 }
 
-.bucket-list-container .destination-card h1 {
+/* Flipped margin for Arabic (RTL) */
+[dir="rtl"] .bucket-list-slider .destination-card {
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+.bucket-list-slider .destination-card h1 {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 24px;
     font-weight: 700;
@@ -386,7 +401,7 @@ body {
     color: #ffffff;
 }
 
-.bucket-list-container .destination-card p {
+.bucket-list-slider .destination-card p {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -394,7 +409,7 @@ body {
     color: #ffffff;
 }
 
-.bucket-list-container .icons {
+.bucket-list-slider .icons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -402,38 +417,37 @@ body {
     margin-top: auto;
 }
 
-.bucket-list-container .icons a {
+.bucket-list-slider .icons a {
     text-decoration: none;
     width: 100%;
     display: flex;
 }
 
-.bucket-list-container .hotels,
-.bucket-list-container .activities,
-.bucket-list-container .flights {
+.bucket-list-slider .hotels,
+.bucket-list-slider .activities,
+.bucket-list-slider .flights {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 8px;
     gap: 4px;
-    border-radius: 12px;
+    border-radius: 24px;
     width: 100%;
     box-sizing: border-box;
-
     background-color: #ffffff;
 }
 
-.bucket-list-container .icons i {
+.bucket-list-slider .icons i {
     font-size: 14px;
     color: #0d7c86;
     line-height: 1;
 }
 
-.bucket-list-container .icons h1 {
+.bucket-list-slider .icons h1 {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     color: #0d7c86;
@@ -502,7 +516,7 @@ max-width: 1440px;
 .contact-us-card {
     padding: 24px;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
+    border-radius: 24px;
 
 }
 
@@ -520,7 +534,7 @@ max-width: 1440px;
 .contact-us-title p {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     color: #0d7c86;
@@ -535,8 +549,8 @@ max-width: 1440px;
 
 .chat-button, .email-button {
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 24px;
     padding: 12px 24px;
     color: #0d7c86;
     font-size: 14px;
@@ -582,7 +596,7 @@ max-width: 1440px;
 .footer-links span {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     color: #ffffff;
     text-decoration: none;
 }
@@ -590,6 +604,6 @@ max-width: 1440px;
 .footer-container h2 {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     color: #ffffff;
 }

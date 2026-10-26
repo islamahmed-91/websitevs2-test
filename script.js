@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isArabic = document.documentElement.lang?.toLowerCase().startsWith('ar');
 
     // ==========================================
-    // 2. FETCH & RENDER DISCOUNTS
+    // 2. FETCH & RENDER DISCOUNTS SLIDER
     // ==========================================
     fetch('inventory/discounts.csv')
         .then(response => {
@@ -87,11 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
             slider.appendChild(card);
         });
 
-        initSlider(container, slider);
+        initSlider(container, slider, '.discount-card');
     }
 
     // ==========================================
-    // 3. FETCH & RENDER BUCKET LIST
+    // 3. FETCH & RENDER BUCKET LIST SLIDER
     // ==========================================
     fetch('inventory/bucket-list.csv')
         .then(response => {
@@ -111,12 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     function renderBucketListCards(items) {
-        const container = document.querySelector('.bucket-list-cards');
+        const container = document.querySelector('.bucket-list-slider-container');
+        const slider = document.querySelector('.bucket-list-slider');
         const section = document.querySelector('.bucket-list-container');
 
-        if (!container) return;
+        if (!slider || !container) return;
 
-        container.innerHTML = '';
+        slider.innerHTML = '';
 
         if (items.length === 0) {
             if (section) section.style.display = 'none';
@@ -167,15 +168,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
 
-            container.appendChild(card);
+            slider.appendChild(card);
         });
+
+        initSlider(container, slider, '.destination-card');
     }
 
     // ==========================================
-    // 4. RTL-AWARE SLIDER ENGINE
+    // 4. REUSABLE RTL-AWARE SLIDER ENGINE
     // ==========================================
-    function initSlider(container, slider) {
-        const cards = slider.querySelectorAll('.discount-card');
+    function initSlider(container, slider, cardSelector) {
+        const cards = slider.querySelectorAll(cardSelector);
         if (cards.length <= 1) return;
 
         let currentIndex = 0;

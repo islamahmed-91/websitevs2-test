@@ -499,6 +499,12 @@ body {
 }
 
 
+.worth-a-shot-card-container {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
 .worth-a-shot-card {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 40%), url(images/Burj\ Al\ Arab\ &\ Atlantis\ Jet\ Ski\ Tour.jpeg);
     background-position: center;
@@ -514,21 +520,38 @@ body {
 }
 
 
-.worth-a-shot-card h1 {
+.worth-a-shot-card2 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 40%), url(images/Ayung\ Rafting\ Trip.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    aspect-ratio: 9 / 16;
+    padding: 24px;
+
+    background-color: rgba(0, 0, 0, 0.24);
+    background-blend-mode: multiply;
+    
+}
+
+
+.worth-a-shot-card-container h1 {
      font-family: 'Geist', "Inter", sans-serif;
     font-size: 24px;
     font-weight: 700;
     margin: 0;
     color: #ffffff;
+    padding-bottom: 4px;
 }
 
 
-.worth-a-shot-card p {
+.worth-a-shot-card-container p {
      font-family: 'Geist', "Inter", sans-serif;
     font-size: 14px;
     font-weight: 400;
     margin: 0;
     color: #ffffff;
+    padding-bottom: 12px;
 }
 
 
@@ -539,17 +562,17 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
 }
 .worth-a-shot-container .icon-text {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2px;
-    padding-top: 12px;
 }
 
 .worth-a-shot-container .icon-text i {
-    font-size: 14px;
+    font-size: 12px;
     color: #ffffff;
     line-height: 1;
 }
@@ -557,11 +580,12 @@ body {
 
 .worth-a-shot-container .icon-text p {
  font-family: 'Geist', "Inter", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     margin: 0;
     color: #ffffff;
     line-height: 1;
+    padding-bottom: 0px;
 }
 
 

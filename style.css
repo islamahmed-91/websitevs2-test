@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap');
 
 
-body {
+html, body {
     background-color: #ffffff;
     margin: 0px;
+    overflow-x: hidden;
 }
 
 
@@ -80,21 +81,20 @@ body {
 .discounts-title {
     display: flex;
     flex-direction: row;
-    justify-content: left;
     align-items: center;
     gap: 4px;
     padding-bottom: 12px;
 }
 
 .discounts-title i {
-    font-size: 24px;
+    font-size: 20px;
     color: #0d7c86;
 }
 
 
 .discounts-title h1 {
     font-family: 'Geist', "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     margin: 0px;
     color: #0d7c86;
@@ -123,7 +123,7 @@ body {
 
 .discount-card h1 {
     font-family: 'Geist', "Inter", sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     color: #ffffff;
     margin: 0px;
@@ -132,11 +132,10 @@ body {
 
 .discount-card h2 {
     font-family: 'Geist', "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     color: #ffffff;
     margin: 0px;
-    padding-bottom: 4px;
 }
 
 
@@ -171,7 +170,7 @@ body {
 
 /*DISCOUNTS SIDER*/
 .discounts-slider-container {
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     border-radius: 24px;
 }
@@ -217,14 +216,14 @@ body {
 }
 
 .bucket-list-title i {
-    font-size: 24px;
+    font-size: 20px;
     color: #0d7c86;
     line-height: 1;
 }
 
 .bucket-list-title h1 {
     font-family: 'Geist', "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     margin: 0;
     padding: 0;
@@ -234,7 +233,7 @@ body {
 
 /* BUCKET LIST SLIDER */
 .bucket-list-slider-container {
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     border-radius: 24px;
 }
@@ -324,7 +323,7 @@ body {
 .bucket-list-slider .icons h1 {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0;
     padding: 0;
     color: #0d7c86;
@@ -359,14 +358,14 @@ body {
 
 
 .worth-a-shot-title i {
-    font-size: 24px;
+    font-size: 20px;
     color: #0d7c86;
     line-height: 1;
 }
 
 .worth-a-shot-title h1 {
     font-family: 'Geist', "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     margin: 0;
     padding: 0;
@@ -377,7 +376,7 @@ body {
 
 /* WORTH A SHOT SLIDER STYLES */
 .worth-a-shot-slider-container {
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     border-radius: 24px;
 }
@@ -592,8 +591,8 @@ body {
 
 .contact-us-title h1 {
     font-family: 'Geist', "Inter", sans-serif;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     margin: 0;
     padding: 0;
     color: #0d7c86;

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(csvText => {
             const allDiscounts = parseCSV(csvText);
-            const activeDiscounts = allDiscounts.filter(item => 
+            const activeDiscounts = allDiscounts.filter(item =>
                 item['status']?.toLowerCase() === 'active' || item['discount-status']?.toLowerCase() === 'active'
             );
 
@@ -64,12 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const buttonText = isArabic ? 'احجز الخصم' : 'Claim Discount';
 
         discounts.forEach(item => {
-            const percentage = isArabic 
-                ? (item['discount-percentage-ar'] || item['discount-percentage']) 
+            const percentage = isArabic
+                ? (item['discount-percentage-ar'] || item['discount-percentage'])
                 : item['discount-percentage'];
 
-            const name = isArabic 
-                ? (item['discount-name-ar'] || item['discount-name']) 
+            const name = isArabic
+                ? (item['discount-name-ar'] || item['discount-name'])
                 : item['discount-name'];
 
             const card = document.createElement('div');
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h1>${percentage}</h1>
                 <h2>${name}</h2>
                 <a href="https://wa.me/201097000139" target="_blank" rel="noopener noreferrer" class="discount-button">
-                    <i class="fa-brands fa-whatsapp"></i> ${buttonText}
+                     ${buttonText}
                 </a>
             `;
 
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(csvText => {
             const allBucketItems = parseCSV(csvText);
-            const activeBucketItems = allBucketItems.filter(item => 
+            const activeBucketItems = allBucketItems.filter(item =>
                 item['status']?.toLowerCase() === 'active'
             );
 
@@ -131,12 +131,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const flightsLabel = isArabic ? 'طيران' : 'Flights';
 
         items.forEach(item => {
-            const title = isArabic 
-                ? (item['title-ar'] || item['title']) 
+            const title = isArabic
+                ? (item['title-ar'] || item['title'])
                 : item['title'];
 
-            const subtitle = isArabic 
-                ? (item['subtitle-ar'] || item['subtitle']) 
+            const subtitle = isArabic
+                ? (item['subtitle-ar'] || item['subtitle'])
                 : item['subtitle'];
 
             const card = document.createElement('div');
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(csvText => {
             const allItems = parseCSV(csvText);
-            const activeItems = allItems.filter(item => 
+            const activeItems = allItems.filter(item =>
                 item['status']?.toLowerCase() === 'active'
             );
 
@@ -294,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function goToSlide(index) {
             currentIndex = index;
-            slider.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+            slider.style.transition = 'transform 2s cubic-bezier(0.25, 1, 0.5, 1)';
             const offset = isRTL ? (currentIndex * 100) : (-currentIndex * 100);
             slider.style.transform = `translateX(${offset}%)`;
         }

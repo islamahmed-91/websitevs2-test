@@ -177,7 +177,7 @@ html, body {
 
 .discounts-slider {
     display: flex;
-    transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
     width: calc(100% + 12px);
 }
 
@@ -240,7 +240,7 @@ html, body {
 
 .bucket-list-slider {
     display: flex;
-    transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
     width: calc(100% + 12px);
 }
 
@@ -383,7 +383,7 @@ html, body {
 
 .worth-a-shot-slider {
     display: flex;
-    transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
     width: calc(100% + 12px);
 }
 

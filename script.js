@@ -294,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function goToSlide(index) {
             currentIndex = index;
-            slider.style.transition = 'transform 2s cubic-bezier(0.25, 1, 0.5, 1)';
+            slider.style.transition = 'transform 1.2s cubic-bezier(0.25, 1, 0.5, 1)';
             const offset = isRTL ? (currentIndex * 100) : (-currentIndex * 100);
             slider.style.transform = `translateX(${offset}%)`;
         }

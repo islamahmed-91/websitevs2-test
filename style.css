@@ -17,12 +17,14 @@ body {
 /*NAVBAR*/
 .navbar {
 
-    background: linear-gradient(to bottom, #12384a, #0d7c86);
+    background: transparent;
     width: 100%;
 
     position: static;
     top: 0;
     z-index: 1000;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .navbar-content {
@@ -38,146 +40,21 @@ body {
     height: 24px;
 }
 
-.menu-button {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #ffffff;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    padding: 8px 20px;
-    border-radius: 24px;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-}
-
 .menu-button i {
-    font-size: 16px;
-    color: #ffffff;
-}
-
-
-
-
-
-
-
-
-
-
-
-/*HERO*/
-
-.hero-container {
-    padding: 48px 24px;
-    width: 100%;
-    margin: auto;
-    box-sizing: border-box;
-
-    background: url(images/hero.webp);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    background-color: rgba(0, 0, 0, 0.48);
-    background-blend-mode: multiply;
-}
-
-.hero-text h1 {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    padding-bottom: 4px;
-    color: #ffffff;
-
-    max-width: 1440px;
-    margin: 0px auto;
-}
-
-.hero-text p {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    padding-bottom: 24px;
-    color: #ffffff;
-
-    max-width: 1440px;
-    margin: 0px auto;
-}
-
-
-
-
-
-/*SERVICES*/
-.services {
-    max-width: 1440px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-
-    background-color: rgba(255, 255, 255, 0.4);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    padding: 24px 12px;
-    border-radius: 24px;
-}
-
-.service-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    gap: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    padding: 8px 24px;
-    background-color: #ffffff;
-    text-decoration: none;
-}
-
-
-.separate-line {
-    width: 0.5px;
-    height: 52px;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.service-ico i {
-    font-size: 28px;
+    font-size: 24px;
     color: #0d7c86;
 }
 
 
-.card-texts {
-    line-height: 0;
-}
 
 
 
-.service-card h1 {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    padding-bottom: 12px;
-    color: #0d7c86;
-}
 
-.service-card h2 {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #6b6760;
-}
+
+
+
+
+
 
 
 
@@ -273,7 +150,7 @@ body {
 }
 
 .discount-card .discount-button i {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .discount-card .discount-button {
@@ -281,11 +158,11 @@ body {
     bottom: 24px;
 
     font-family: 'Geist', "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #0d7c86;
     background-color: #ffffff;
-    padding: 12px 24px;
+    padding: 14px 24px;
     border: none;
     border-radius: 24px;
     text-decoration: none;
@@ -462,7 +339,6 @@ body {
 
 
 /* WORTH A SHOT */
-
 .worth-a-shot-container {
     max-width: 1440px;
     margin: auto;
@@ -500,9 +376,9 @@ body {
 
 
 .worth-a-shot-card-container {
-display: flex;
-flex-direction: column;
-gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .worth-a-shot-card {
@@ -512,81 +388,141 @@ gap: 12px;
     background-repeat: no-repeat;
     border-radius: 24px;
     aspect-ratio: 9 / 16;
-    padding: 24px;
+    padding: 12px 12px 24px;
 
     background-color: rgba(0, 0, 0, 0.24);
     background-blend-mode: multiply;
-    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-
-.worth-a-shot-card2 {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 40%), url(images/Ayung\ Rafting\ Trip.avif);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 24px;
-    aspect-ratio: 9 / 16;
-    padding: 24px;
-
-    background-color: rgba(0, 0, 0, 0.24);
-    background-blend-mode: multiply;
-    
+.activity-name-and-star-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
 }
 
-
-.worth-a-shot-card-container h1 {
-     font-family: 'Geist', "Inter", sans-serif;
+.activity-name h1 {
+    font-family: 'Geist', "Inter", sans-serif;
     font-size: 24px;
     font-weight: 700;
     margin: 0;
     color: #ffffff;
-    padding-bottom: 4px;
 }
 
 
-.worth-a-shot-card-container p {
-     font-family: 'Geist', "Inter", sans-serif;
+.star-rating-and-reviews-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.star-rating i {
+    font-size: 16px;
+    color: #FFDF00;
+}
+
+.star-rating p {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    color: #ffffff;
+}
+
+
+.reviews-count p {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    color: #ffffff;
+}
+
+
+.bottom-container {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.bottom-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+
+.bottom .icon1,
+.icon2,
+.icon3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.bottom-icons p {
+    font-family: 'Geist', "Inter", sans-serif;
     font-size: 14px;
     font-weight: 400;
     margin: 0;
-    color: #ffffff;
-    padding-bottom: 12px;
+    color: rgba(0, 0, 0, 0.8)
+}
+
+.bottom-icons i {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8)
 }
 
 
+.activity-button {
+    background-color: #0d7c86;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    padding: 14px 24px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+}
 
-
-.icons-card {
+.bottom-container a {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-.worth-a-shot-container .icon-text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2px;
-}
-
-.worth-a-shot-container .icon-text i {
-    font-size: 12px;
-    color: #ffffff;
-    line-height: 1;
+    justify-content: center;
 }
 
 
-.worth-a-shot-container .icon-text p {
- font-family: 'Geist', "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    margin: 0;
-    color: #ffffff;
-    line-height: 1;
-    padding-bottom: 0px;
-}
+
+
+
+
 
 
 
@@ -598,10 +534,9 @@ gap: 12px;
 
 
 /* CONTACT US */
-
 .contact-us-container {
 
-max-width: 1440px;
+    max-width: 1440px;
     margin: auto;
     padding: 12px 24px;
 }
@@ -641,14 +576,15 @@ max-width: 1440px;
     gap: 8px;
 }
 
-.chat-button, .email-button {
+.chat-button,
+.email-button {
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 24px;
-    padding: 12px 24px;
+    padding: 14px 24px;
     color: #0d7c86;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 
@@ -673,8 +609,9 @@ max-width: 1440px;
 
 /*FOOTER*/
 .footer-container {
-    background: linear-gradient(to bottom, #12384a, #0d7c86);
-    padding: 48px 24px;
+    background: transparent;
+    padding: 12px 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .footer-content {
@@ -685,11 +622,12 @@ max-width: 1440px;
     gap: 4px;
 }
 
-.footer-container h1 {
+.footer-container .footer-content p {
     font-family: 'Geist', "Inter", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    color: #0d7c86;
+    margin: 0;
 }
 
 .footer-links a,
@@ -697,13 +635,6 @@ max-width: 1440px;
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: #ffffff;
+    color: #0d7c86;
     text-decoration: none;
-}
-
-.footer-container h2 {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: #ffffff;
 }

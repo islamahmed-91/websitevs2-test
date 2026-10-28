@@ -175,7 +175,109 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==========================================
-    // 4. REUSABLE RTL-AWARE SLIDER ENGINE
+    // 4. FETCH & RENDER WORTH A SHOT SLIDER
+    // ==========================================
+    fetch('inventory/worth-a-shot.csv')
+        .then(response => {
+            if (!response.ok) throw new Error("Unable to load worth-a-shot CSV.");
+            return response.text();
+        })
+        .then(csvText => {
+            const allItems = parseCSV(csvText);
+            const activeItems = allItems.filter(item => 
+                item['status']?.toLowerCase() === 'active'
+            );
+
+            renderWorthAShotCards(activeItems);
+        })
+        .catch(error => {
+            console.error("Error loading worth-a-shot CSV:", error);
+        });
+
+    function renderWorthAShotCards(items) {
+        const container = document.querySelector('.worth-a-shot-slider-container');
+        const slider = document.querySelector('.worth-a-shot-slider');
+        const section = document.querySelector('.worth-a-shot-container');
+
+        if (!slider || !container) return;
+
+        slider.innerHTML = '';
+
+        if (items.length === 0) {
+            if (section) section.style.display = 'none';
+            return;
+        }
+
+        if (section) section.style.display = 'block';
+
+        const buttonText = isArabic ? 'عرض تفاصيل النشاط' : 'View Activity Details';
+
+        items.forEach(item => {
+            const title = isArabic ? (item['title-ar'] || item['title']) : item['title'];
+            const location = isArabic ? (item['location-ar'] || item['location']) : item['location'];
+            const rating = isArabic ? (item['rating-ar'] || item['rating']) : item['rating'];
+            const duration = isArabic ? (item['duration-ar'] || item['duration']) : item['duration'];
+            const feature1 = isArabic ? (item['feature1-ar'] || item['feature1']) : item['feature1'];
+            const feature2 = isArabic ? (item['feature2-ar'] || item['feature2']) : item['feature2'];
+            const reviewsCount = isArabic ? (item['reviews-count-ar'] || item['reviews-count']) : item['reviews-count'];
+
+            const card = document.createElement('div');
+            card.className = 'worth-a-shot-card';
+            card.style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 40%), url('${item['photo-url']}')`;
+
+            card.innerHTML = `
+                <div class="top">
+                    <div class="activity-name-and-star-rating">
+                        <div class="activity-name-and-location">
+                            <h1>${title}</h1>
+                            <div class="city-and-country">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>${location}</p>
+                            </div>
+                        </div>
+                        <div class="star-rating-and-reviews-count">
+                            <div class="star-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <p>${rating || '5.0'}</p>
+                            </div>
+                            <div class="reviews-count">
+                                <p>${reviewsCount}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <div class="bottom-container">
+                        <div class="bottom-icons">
+                            <div class="bottom icon1">
+                                <i class="fa-solid fa-stopwatch"></i>
+                                <p>${duration}</p>
+                            </div>
+                            <div class="icon2">
+                                <i class="fa-solid fa-utensils"></i>
+                                <p>${feature1}</p>
+                            </div>
+                            <div class="icon3">
+                                <i class="fa-solid fa-language"></i>
+                                <p>${feature2}</p>
+                            </div>
+                        </div>
+                        <a href="${item['link-url'] || 'activities-search-form.html'}">
+                            <button class="activity-button">${buttonText}</button>
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            slider.appendChild(card);
+        });
+
+        initSlider(container, slider, '.worth-a-shot-card');
+    }
+
+    // ==========================================
+    // 5. REUSABLE RTL-AWARE SLIDER ENGINE (MANUAL DRAG/SWIPE ONLY)
     // ==========================================
     function initSlider(container, slider, cardSelector) {
         const cards = slider.querySelectorAll(cardSelector);
@@ -183,8 +285,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let currentIndex = 0;
         const totalCards = cards.length;
-        const intervalTime = 4000;
-        let swipeInterval = null;
 
         const isRTL = document.documentElement.dir === 'rtl' || getComputedStyle(document.body).direction === 'rtl';
 
@@ -194,34 +294,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function goToSlide(index) {
             currentIndex = index;
-            slider.style.transition = 'transform 2s cubic-bezier(0.25, 1, 0.5, 1)';
+            slider.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
             const offset = isRTL ? (currentIndex * 100) : (-currentIndex * 100);
             slider.style.transform = `translateX(${offset}%)`;
         }
 
-        function autoSwipe() {
-            currentIndex = (currentIndex + 1) % totalCards;
-            goToSlide(currentIndex);
-        }
-
-        function startAutoPlay() {
-            if (!swipeInterval) {
-                swipeInterval = setInterval(autoSwipe, intervalTime);
-            }
-        }
-
-        function stopAutoPlay() {
-            clearInterval(swipeInterval);
-            swipeInterval = null;
-        }
-
         function handleDragStart(e) {
             isDragging = true;
-            stopAutoPlay();
-
             startX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
             currentX = startX;
-
             slider.style.transition = 'none';
         }
 
@@ -260,7 +341,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             goToSlide(currentIndex);
-            startAutoPlay();
         }
 
         container.addEventListener('touchstart', handleDragStart, { passive: true });
@@ -270,12 +350,5 @@ document.addEventListener("DOMContentLoaded", () => {
         container.addEventListener('mousedown', handleDragStart);
         window.addEventListener('mousemove', handleDragMove);
         window.addEventListener('mouseup', handleDragEnd);
-
-        container.addEventListener('mouseenter', stopAutoPlay);
-        container.addEventListener('mouseleave', () => {
-            if (!isDragging) startAutoPlay();
-        });
-
-        startAutoPlay();
     }
 });

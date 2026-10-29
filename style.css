@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap');
 
 
-html, body {
+html,
+body {
     background-color: #ffffff;
     margin: 0px;
     overflow-x: hidden;
@@ -103,7 +104,7 @@ html, body {
 
 .discount-card {
 
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 85 / 1;
     background-size: cover;
     background-position: center;
     border-radius: 24px;
@@ -111,10 +112,12 @@ html, body {
     background-repeat: no-repeat;
     max-height: 452px;
     position: relative;
+    text-decoration: none;
+    cursor: pointer;
 
 
 
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.64);
     background-blend-mode: multiply;
 }
 
@@ -132,40 +135,13 @@ html, body {
 
 .discount-card h2 {
     font-family: 'Geist', "Inter", sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     color: #ffffff;
     margin: 0px;
 }
 
 
-
-.discount-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-}
-
-.discount-card .discount-button i {
-    font-size: 18px;
-}
-
-.discount-card .discount-button {
-    position: absolute;
-    bottom: 24px;
-
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #0d7c86;
-    background-color: #ffffff;
-    padding: 14px 24px;
-    border: none;
-    border-radius: 24px;
-    text-decoration: none;
-}
 
 
 /*DISCOUNTS SIDER*/
@@ -564,6 +540,60 @@ html, body {
 
 
 
+/* CRUISE EXPERIENCE */
+.cruise-container {
+
+    max-width: 1440px;
+    margin: auto;
+    padding: 12px 24px;
+}
+
+.cruise-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+}
+
+
+.cruise-title i {
+    font-size: 20px;
+    color: #0d7c86;
+    line-height: 1;
+}
+
+.cruise-title h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #0d7c86;
+    line-height: 1;
+}
+
+.cruise-card {
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cruise-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -577,7 +607,7 @@ html, body {
 
     max-width: 1440px;
     margin: auto;
-    padding: 12px 24px;
+    padding: 12px 24px 24px;
 }
 
 

@@ -61,9 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (discountsSection) discountsSection.style.display = 'block';
 
-        const buttonText = isArabic ? 'احجز الخصم' : 'Claim Discount';
-
-        discounts.forEach(item => {
+        discounts.forEach((item, index) => {
             const percentage = isArabic
                 ? (item['discount-percentage-ar'] || item['discount-percentage'])
                 : item['discount-percentage'];
@@ -72,16 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 ? (item['discount-name-ar'] || item['discount-name'])
                 : item['discount-name'];
 
-            const card = document.createElement('div');
+            // Priority: link-url column from CSV -> fallback to discount1.html, discount2.html, etc.
+            const targetUrl = item['link-url'] || `discount${index + 1}.html`;
+
+            // Create card directly as an anchor tag
+            const card = document.createElement('a');
             card.className = 'discount-card';
+            card.href = targetUrl;
             card.style.backgroundImage = `url('${item['photo-url']}')`;
 
             card.innerHTML = `
                 <h1>${percentage}</h1>
                 <h2>${name}</h2>
-                <a href="https://wa.me/201097000139" target="_blank" rel="noopener noreferrer" class="discount-button">
-                     ${buttonText}
-                </a>
             `;
 
             slider.appendChild(card);

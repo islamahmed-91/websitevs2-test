@@ -79,27 +79,6 @@ body {
     padding: 12px 24px;
 }
 
-.discounts-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-    padding-bottom: 12px;
-}
-
-.discounts-title i {
-    font-size: 20px;
-    color: #0d7c86;
-}
-
-
-.discounts-title h1 {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0px;
-    color: #0d7c86;
-}
 
 
 .discount-card {
@@ -117,7 +96,7 @@ body {
 
 
 
-    background-color: rgba(0, 0, 0, 0.64);
+    background-color: rgba(0, 0, 0, 0.24);
     background-blend-mode: multiply;
 }
 
@@ -305,6 +284,87 @@ body {
     color: #0d7c86;
     line-height: 1;
 }
+
+
+
+
+
+
+
+/* TRANSFERS */
+.transfers-container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 12px 24px;
+}
+
+.transfers-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+}
+
+.transfers-title i {
+    font-size: 20px;
+    color: #0d7c86;
+    line-height: 1;
+}
+
+.transfers-title h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #0d7c86;
+    line-height: 1;
+}
+
+
+.transfers-card {
+    border: 1px solid rgba(13, 124, 134, 0.2);
+    border-radius: 24px;
+    padding: 24px;
+}
+.transfers-img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.transfers-img img {
+    width: 48%;
+    height: auto;
+}
+
+.transfers-card h1 {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: #0d7c86;
+}
+
+.transfers-card p {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    color: #0d7c86;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

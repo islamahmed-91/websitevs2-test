@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1911 600" width="1911" height="600">
+  <title>Standard compact sedan, obsidian, side view</title>
+  <defs>
+    <!-- Body silhouette -->
+    <path id="bodyShape" d="M8,492 L6,330 C6,280 14,246 44,230 C150,208 290,196 405,188 C470,140 580,64 700,30 C790,6 900,2 990,6 C1090,10 1180,62 1250,112 C1290,142 1320,166 1345,190 C1480,198 1700,222 1850,262 C1884,272 1906,292 1908,322 L1906,452 C1904,490 1898,505 1880,512 L1700,516 L1370,518 L540,518 L210,516 L30,508 C14,505 9,500 8,492 Z"/>
+    <clipPath id="bodyClip"><use xlink:href="#bodyShape"/></clipPath>
+
+    <!-- Window shapes -->
+    <path id="wRear" d="M575,196 C640,118 740,64 884,50 L896,196 Z"/>
+    <path id="wFront" d="M924,48 C1040,46 1136,70 1224,134 C1270,166 1306,190 1332,202 L946,199 Z"/>
+    <path id="wWedge" d="M360,186 C466,140 574,70 690,38 L676,56 C590,92 500,140 440,184 Z"/>
+    <clipPath id="glassClip"><use xlink:href="#wRear"/><use xlink:href="#wFront"/></clipPath>
+
+    <!-- Paint (silver-grey metallic) -->
+    <linearGradient id="paint" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="520">
+      <stop offset="0" stop-color="#666b7d"/>
+      <stop offset=".14" stop-color="#3b4050"/>
+      <stop offset=".38" stop-color="#252935"/>
+      <stop offset=".7" stop-color="#14161e"/>
+      <stop offset="1" stop-color="#090a0e"/>
+    </linearGradient>
+    <linearGradient id="endShade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1911" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity=".4"/>
+      <stop offset=".12" stop-color="#000" stop-opacity="0"/>
+      <stop offset=".86" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".35"/>
+    </linearGradient>
+    <linearGradient id="hl" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1911" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".2" stop-color="#fff" stop-opacity=".45"/>
+      <stop offset=".55" stop-color="#fff" stop-opacity=".6"/>
+      <stop offset=".82" stop-color="#fff" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glass -->
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#434e6b"/>
+      <stop offset=".35" stop-color="#1b2030"/>
+      <stop offset="1" stop-color="#07080d"/>
+    </linearGradient>
+
+    <!-- Lamps -->
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b3101c"/>
+      <stop offset="1" stop-color="#ff3a33"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f8fb"/>
+      <stop offset="1" stop-color="#bcc5d3"/>
+    </linearGradient>
+
+    <!-- Wheel parts -->
+    <radialGradient id="tire" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="146">
+      <stop offset=".72" stop-color="#2a2d36"/>
+      <stop offset=".9" stop-color="#15161c"/>
+      <stop offset="1" stop-color="#08090b"/>
+    </radialGradient>
+    <linearGradient id="rimLip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef0f4"/>
+      <stop offset=".5" stop-color="#9aa1af"/>
+      <stop offset="1" stop-color="#6b7281"/>
+    </linearGradient>
+    <radialGradient id="brake" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#4a4e5a"/>
+      <stop offset=".7" stop-color="#2d3039"/>
+      <stop offset="1" stop-color="#17181d"/>
+    </radialGradient>
+    <linearGradient id="spokeG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6e7482"/>
+      <stop offset=".4" stop-color="#e9ecf1"/>
+      <stop offset=".7" stop-color="#a7adba"/>
+      <stop offset="1" stop-color="#5a606d"/>
+    </linearGradient>
+    <linearGradient id="faceLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".2"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".3"/>
+    </linearGradient>
+
+    <path id="spoke" d="M22,-8 L98,-15 Q104,0 98,15 L22,8 Z" fill="url(#spokeG)"/>
+    <g id="wheel">
+      <circle r="146" fill="url(#tire)"/>
+      <circle r="136" fill="none" stroke="#33363f" stroke-width="2" opacity=".8"/>
+      <circle r="108" fill="url(#rimLip)"/>
+      <circle r="102" fill="#101216"/>
+      <circle r="98" fill="url(#brake)"/>
+      <circle r="78" fill="none" stroke="#14151a" stroke-width="2" opacity=".6"/>
+      <use xlink:href="#spoke" transform="rotate(-90)"/>
+      <use xlink:href="#spoke" transform="rotate(-18)"/>
+      <use xlink:href="#spoke" transform="rotate(54)"/>
+      <use xlink:href="#spoke" transform="rotate(126)"/>
+      <use xlink:href="#spoke" transform="rotate(198)"/>
+      <circle r="100" fill="url(#faceLight)"/>
+      <circle r="26" fill="#4a4f5c"/>
+      <circle r="19" fill="#23262e"/>
+      <circle cx="0" cy="-12" r="2.8" fill="#c9cdd6"/>
+      <circle cx="11.4" cy="-3.7" r="2.8" fill="#c9cdd6"/>
+      <circle cx="7" cy="9.7" r="2.8" fill="#c9cdd6"/>
+      <circle cx="-7" cy="9.7" r="2.8" fill="#c9cdd6"/>
+      <circle cx="-11.4" cy="-3.7" r="2.8" fill="#c9cdd6"/>
+    </g>
+
+    <filter id="blur8" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="blur3" x="-30%" y="-300%" width="160%" height="700%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="955" cy="580" rx="920" ry="12" fill="#000" opacity=".28" filter="url(#blur8)"/>
+  <ellipse cx="380" cy="578" rx="115" ry="6" fill="#000" opacity=".5" filter="url(#blur3)"/>
+  <ellipse cx="1520" cy="578" rx="115" ry="6" fill="#000" opacity=".5" filter="url(#blur3)"/>
+
+  <!-- Body paint -->
+  <use xlink:href="#bodyShape" fill="url(#paint)"/>
+  <rect x="0" y="0" width="1911" height="520" fill="url(#endShade)" clip-path="url(#bodyClip)"/>
+
+  <g clip-path="url(#bodyClip)">
+    <!-- Roof / hood / trunk sheen -->
+    <path d="M405,188 C470,140 580,64 700,30 C790,6 900,2 990,6 C1090,10 1180,62 1250,112 C1290,142 1320,166 1345,190" transform="translate(0,7)" fill="none" stroke="url(#hl)" stroke-width="5" opacity=".75"/>
+    <path d="M1345,190 C1480,198 1700,222 1850,262" transform="translate(0,7)" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="4"/>
+    <path d="M44,230 C150,208 290,196 405,188" transform="translate(0,7)" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="4"/>
+
+    <!-- Shoulder and lower character lines -->
+    <path d="M40,242 C200,222 380,212 520,213 L1360,214 C1400,215 1430,219 1452,224" fill="none" stroke="url(#hl)" stroke-width="7"/>
+    <path d="M540,296 L1368,298" fill="none" stroke="url(#hl)" stroke-width="5" opacity=".6"/>
+    <path d="M540,304 L1368,306" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3"/>
+
+    <!-- Black plastic bumpers and skirt -->
+    <path d="M6,470 C80,476 160,480 218,480 L218,522 L6,522 Z" fill="#05060a"/>
+    <path d="M6,470 C80,476 160,480 218,480" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1.5"/>
+    <path d="M1690,486 C1770,484 1850,478 1912,470 L1912,522 L1690,522 Z" fill="#05060a"/>
+    <path d="M1690,486 C1770,484 1850,478 1906,471" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1.5"/>
+    <rect x="560" y="490" width="800" height="22" rx="8" fill="#05060a" stroke="#fff" stroke-opacity=".12" stroke-width="1"/>
+  </g>
+
+  <!-- Door seams -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M575,204 C571,290 568,390 572,490" stroke="#030407" stroke-width="2"/>
+    <path d="M577,204 C573,290 570,390 574,490" stroke="#fff" stroke-opacity=".1" stroke-width="1"/>
+    <path d="M928,202 C929,300 930,400 930,490" stroke="#030407" stroke-width="2.2"/>
+    <path d="M1362,208 C1380,260 1388,330 1384,396" stroke="#030407" stroke-width="2"/>
+    <path d="M1364,208 C1382,260 1390,330 1386,396" stroke="#fff" stroke-opacity=".1" stroke-width="1"/>
+    <path d="M931,202 C932,300 933,400 933,490" stroke="#fff" stroke-opacity=".1" stroke-width="1"/>
+  </g>
+
+  <!-- Greenhouse -->
+  <use xlink:href="#wWedge" fill="url(#glass)"/>
+  <path d="M884,46 L924,44 L946,200 L896,196 Z" fill="#14161c"/>
+  <use xlink:href="#wRear" fill="url(#glass)"/>
+  <use xlink:href="#wFront" fill="url(#glass)"/>
+  <g clip-path="url(#glassClip)">
+    <polygon points="640,200 720,200 820,40 760,40" fill="#fff" opacity=".13"/>
+    <polygon points="1010,200 1100,200 1170,40 1100,40" fill="#fff" opacity=".1"/>
+  </g>
+  <g fill="none" stroke="#14161c" stroke-width="3.5" stroke-linejoin="round">
+    <use xlink:href="#wRear"/>
+    <use xlink:href="#wFront"/>
+  </g>
+  <path d="M470,196 L1336,203" stroke="#1a1c23" stroke-width="5" stroke-linecap="round"/>
+  <path d="M470,201 L1336,208" stroke="#fff" stroke-opacity=".3" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Mirror -->
+  <path d="M1256,198 L1330,201 L1346,212 L1290,208 Z" fill="#14161c"/>
+  <path d="M1240,160 Q1240,149 1253,149 L1290,151 Q1308,153 1308,169 L1306,185 Q1304,199 1288,199 L1254,199 Q1239,199 1239,185 Z" fill="#2c303d"/>
+  <path d="M1244,156 Q1250,151 1262,152 L1288,154" stroke="#fff" stroke-opacity=".6" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Door handles -->
+  <g fill="#4a5062" stroke="#05060a" stroke-width="1.5">
+    <rect x="740" y="234" width="68" height="11" rx="5.5"/>
+    <rect x="1130" y="234" width="68" height="11" rx="5.5"/>
+  </g>
+
+  <!-- Taillight -->
+  <path d="M10,252 L66,256 C88,260 104,270 108,282 L96,300 L10,314 Z" fill="url(#tail)"/>
+  <path d="M18,274 L92,280" stroke="#7d0a12" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  <path d="M12,300 L70,294 L72,306 L12,314 Z" fill="#f2f4f8" opacity=".9"/>
+
+  <!-- Headlight -->
+  <path d="M1750,298 C1790,290 1850,288 1884,292 C1898,298 1904,314 1904,328 L1896,340 L1764,342 C1752,332 1748,314 1750,298 Z" fill="url(#lens)" stroke="#8d95a5" stroke-width="1.5"/>
+  <ellipse cx="1832" cy="322" rx="36" ry="12" fill="#2a2f3b"/>
+  <circle cx="1846" cy="322" r="6" fill="#dfe8f5"/>
+  <path d="M1770,336 L1850,334" stroke="#ffb340" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Front intake slit -->
+  <path d="M1770,430 L1892,424 L1894,444 L1778,450 Z" fill="#0d0e12"/>
+
+  <!-- Wheel arches -->
+  <g clip-path="url(#bodyClip)">
+    <circle cx="380" cy="432" r="168" fill="none" stroke="#0a0b10" stroke-width="10"/>
+    <circle cx="1520" cy="432" r="168" fill="none" stroke="#0a0b10" stroke-width="10"/>
+    <circle cx="380" cy="432" r="163" fill="#07080b"/>
+    <circle cx="1520" cy="432" r="163" fill="#07080b"/>
+    <circle cx="380" cy="432" r="175" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/>
+    <circle cx="1520" cy="432" r="175" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/>
+  </g>
+
+  <!-- Wheels -->
+  <use xlink:href="#wheel" transform="translate(380,432)"/>
+  <use xlink:href="#wheel" transform="translate(1520,432) rotate(12)"/>
+</svg>

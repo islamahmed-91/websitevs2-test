@@ -292,10 +292,16 @@ body {
 
 
 /* TRANSFERS */
-.transfers-container {
+.airport-transfers-container {
     max-width: 1440px;
     margin: auto;
     padding: 12px 24px;
+}
+
+
+.airport-transfers-container a {
+    text-decoration: none;
+    width: 100%;
 }
 
 .transfers-title {
@@ -323,19 +329,30 @@ body {
 }
 
 
+.airport-transfer-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
 .transfers-card {
     border: 1px solid rgba(13, 124, 134, 0.2);
     border-radius: 24px;
     padding: 24px;
-}
-.transfers-img {
-    width: 100%;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
 }
 
+
 .transfers-img img {
-    width: 48%;
+    max-width: 120px;
     height: auto;
+    padding-bottom: 4px;
 }
 
 .transfers-card h1 {
@@ -352,6 +369,39 @@ body {
     font-weight: 400;
     margin: 0;
     color: #0d7c86;
+}
+
+
+.passengers-and-baggage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.passengers-and-baggage i {
+    font-size: 14px;
+    color: #0d7c86;
+}
+
+
+.passengers-and-baggage p {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    color: #0d7c86;
+}
+
+
+.passengers-and-baggage .passengers,
+.passengers-and-baggage .baggage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 

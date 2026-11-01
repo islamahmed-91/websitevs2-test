@@ -174,30 +174,31 @@ document.addEventListener("DOMContentLoaded", () => {
         initSlider(container, slider, '.destination-card');
     }
 
+
     // ==========================================
-    // 4. FETCH & RENDER WORTH A SHOT SLIDER
+    // 4. FETCH & RENDER AIRPORT TRANSFERS SLIDER
     // ==========================================
-    fetch('inventory/worth-a-shot.csv')
+    fetch('inventory/transfers.csv')
         .then(response => {
-            if (!response.ok) throw new Error("Unable to load worth-a-shot CSV.");
+            if (!response.ok) throw new Error("Unable to load transfers CSV.");
             return response.text();
         })
         .then(csvText => {
-            const allItems = parseCSV(csvText);
-            const activeItems = allItems.filter(item =>
+            const allTransfers = parseCSV(csvText);
+            const activeTransfers = allTransfers.filter(item =>
                 item['status']?.toLowerCase() === 'active'
             );
 
-            renderWorthAShotCards(activeItems);
+            renderTransfersCards(activeTransfers);
         })
         .catch(error => {
-            console.error("Error loading worth-a-shot CSV:", error);
+            console.error("Error loading transfers CSV:", error);
         });
 
-    function renderWorthAShotCards(items) {
-        const container = document.querySelector('.worth-a-shot-slider-container');
-        const slider = document.querySelector('.worth-a-shot-slider');
-        const section = document.querySelector('.worth-a-shot-container');
+    function renderTransfersCards(items) {
+        const container = document.querySelector('.transfers-slider-container');
+        const slider = document.querySelector('.transfers-slider');
+        const section = document.querySelector('.airport-transfers-container');
 
         if (!slider || !container) return;
 
@@ -210,62 +211,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (section) section.style.display = 'block';
 
-        const buttonText = isArabic ? 'عرض تفاصيل النشاط' : 'View Activity Details';
-
         items.forEach(item => {
-            const title = isArabic ? (item['title-ar'] || item['title']) : item['title'];
-            const location = isArabic ? (item['location-ar'] || item['location']) : item['location'];
-            const rating = isArabic ? (item['rating-ar'] || item['rating']) : item['rating'];
-            const duration = isArabic ? (item['duration-ar'] || item['duration']) : item['duration'];
-            const feature1 = isArabic ? (item['feature1-ar'] || item['feature1']) : item['feature1'];
-            const feature2 = isArabic ? (item['feature2-ar'] || item['feature2']) : item['feature2'];
-            const reviewsCount = isArabic ? (item['reviews-count-ar'] || item['reviews-count']) : item['reviews-count'];
+            const type = isArabic ? (item['transfer-type-ar'] || item['transfer-type']) : item['transfer-type'];
+            const model = isArabic ? (item['car-model-ar'] || item['car-model']) : item['car-model'];
+            const passengers = isArabic ? (item['passengers-count-ar'] || item['passengers-count']) : item['passengers-count'];
+            const baggage = isArabic ? (item['baggage-count-ar'] || item['baggage-count']) : item['baggage-count'];
+            const imageUrl = item['image-url'];
+            const linkUrl = item['link-url'] || 'transfers-search-form.html';
 
-            const card = document.createElement('div');
-            card.className = 'worth-a-shot-card';
-            card.style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 40%), url('${item['photo-url']}')`;
+            const card = document.createElement('a');
+            card.className = 'transfers-card';
+            card.href = linkUrl;
 
             card.innerHTML = `
-                <div class="top">
-                    <div class="activity-name-and-star-rating">
-                        <div class="activity-name-and-location">
-                            <h1>${title}</h1>
-                            <div class="city-and-country">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <p>${location}</p>
-                            </div>
-                        </div>
-                        <div class="star-rating-and-reviews-count">
-                            <div class="star-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <p>${rating || '5.0'}</p>
-                            </div>
-                            <div class="reviews-count">
-                                <p>${reviewsCount}</p>
-                            </div>
-                        </div>
+                <div class="car-and-text">
+                    <div class="transfers-img">
+                        <img src="${imageUrl}" oncontextmenu="return false;" style="-webkit-touch-callout: none; -webkit-user-select: none; user-select: none; pointer-events: none;">
                     </div>
+                    <h1>${type}</h1>
+                    <p>${model}</p>
                 </div>
-
-                <div class="bottom">
-                    <div class="bottom-container">
-                        <div class="bottom-icons">
-                            <div class="bottom icon1">
-                                <i class="fa-solid fa-stopwatch"></i>
-                                <p>${duration}</p>
-                            </div>
-                            <div class="icon2">
-                                <i class="fa-solid fa-utensils"></i>
-                                <p>${feature1}</p>
-                            </div>
-                            <div class="icon3">
-                                <i class="fa-solid fa-language"></i>
-                                <p>${feature2}</p>
-                            </div>
-                        </div>
-                        <a href="${item['link-url'] || 'activities-search-form.html'}">
-                            <button class="activity-button">${buttonText}</button>
-                        </a>
+                <div class="passengers-and-baggage">
+                    <div class="passengers">
+                        <i class="fa-solid fa-user"></i>
+                        <p>x ${passengers}</p>
+                    </div>
+                    <div class="baggage">
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                        <p>x ${baggage}</p>
                     </div>
                 </div>
             `;
@@ -273,11 +246,11 @@ document.addEventListener("DOMContentLoaded", () => {
             slider.appendChild(card);
         });
 
-        initSlider(container, slider, '.worth-a-shot-card');
+        initSlider(container, slider, '.transfers-card');
     }
 
     // ==========================================
-    // 5. REUSABLE RTL-AWARE SLIDER ENGINE (MANUAL DRAG/SWIPE ONLY)
+    // 6. REUSABLE RTL-AWARE SLIDER ENGINE (MANUAL DRAG/SWIPE ONLY)
     // ==========================================
     function initSlider(container, slider, cardSelector) {
         const cards = slider.querySelectorAll(cardSelector);

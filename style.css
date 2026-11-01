@@ -291,17 +291,11 @@ body {
 
 
 
-/* TRANSFERS */
+/* AIRPORT TRANSFERS */
 .airport-transfers-container {
     max-width: 1440px;
     margin: auto;
     padding: 12px 24px;
-}
-
-
-.airport-transfers-container a {
-    text-decoration: none;
-    width: 100%;
 }
 
 .transfers-title {
@@ -328,16 +322,24 @@ body {
     line-height: 1;
 }
 
-
-.airport-transfer-cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
+/* TRANSFERS SLIDER STYLES */
+.transfers-slider-container {
+    overflow: visible;
+    width: 100%;
+    border-radius: 24px;
 }
 
-.transfers-card {
+.transfers-slider {
+    display: flex;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    width: calc(100% + 12px);
+}
+
+.transfers-slider .transfers-card {
+    min-width: calc(100% - 12px);
+    margin-right: 12px;
+    box-sizing: border-box;
+
     border: 1px solid rgba(13, 124, 134, 0.2);
     border-radius: 24px;
     padding: 24px;
@@ -346,8 +348,13 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
 }
 
+[dir="rtl"] .transfers-slider .transfers-card {
+    margin-right: 0;
+    margin-left: 12px;
+}
 
 .transfers-img img {
     max-width: 120px;
@@ -371,7 +378,6 @@ body {
     color: #0d7c86;
 }
 
-
 .passengers-and-baggage {
     display: flex;
     flex-direction: row;
@@ -386,7 +392,6 @@ body {
     color: #0d7c86;
 }
 
-
 .passengers-and-baggage p {
     font-family: 'Geist', "Inter", sans-serif;
     font-size: 14px;
@@ -395,15 +400,14 @@ body {
     color: #0d7c86;
 }
 
-
 .passengers-and-baggage .passengers,
 .passengers-and-baggage .baggage {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 4px;
 }
-
 
 
 
@@ -428,10 +432,6 @@ body {
     max-width: 1440px;
     margin: auto;
     padding: 12px 24px;
-}
-
-.worth-a-shot-container a {
-    text-decoration: none;
 }
 
 .worth-a-shot-title {
@@ -460,188 +460,8 @@ body {
 }
 
 
-/* WORTH A SHOT SLIDER STYLES */
-.worth-a-shot-slider-container {
-    overflow: visible;
-    width: 100%;
-    border-radius: 24px;
-}
-
-.worth-a-shot-slider {
-    display: flex;
-    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
-    width: calc(100% + 12px);
-}
-
-.worth-a-shot-slider .worth-a-shot-card {
-    min-width: calc(100% - 12px);
-    margin-right: 12px;
-    box-sizing: border-box;
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 24px;
-    aspect-ratio: 3 / 4;
-    padding: 12px 12px 24px;
-
-    background-color: rgba(0, 0, 0, 0.24);
-    background-blend-mode: multiply;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-[dir="rtl"] .worth-a-shot-slider .worth-a-shot-card {
-    margin-right: 0;
-    margin-left: 12px;
-}
 
 
-.activity-name-and-star-rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 12px;
-}
-
-.activity-name-and-location h1 {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-    color: #ffffff;
-    max-width: 204px;
-}
-
-
-.city-and-country {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    gap: 4px;
-}
-
-.city-and-country i {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8)
-}
-
-.city-and-country p {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.8)
-}
-
-
-.star-rating-and-reviews-count {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 4px;
-}
-
-.star-rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-}
-
-.star-rating i {
-    font-size: 16px;
-    color: #FFDF00;
-}
-
-.star-rating p {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0;
-    color: #ffffff;
-}
-
-
-.reviews-count p {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-
-.bottom-container {
-    background-color: #ffffff;
-    border-radius: 24px;
-    padding: 12px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-}
-
-
-.bottom-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-
-
-.bottom .icon1,
-.icon2,
-.icon3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-}
-
-.bottom-icons p {
-    font-family: 'Geist', "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0;
-    color: #0d7c86;
-}
-
-.bottom-icons i {
-    font-size: 14px;
-    color: #0d7c86;
-}
-
-
-.activity-button {
-    background-color: #0d7c86;
-    border: 1px solid transparent;
-    border-radius: 24px;
-    padding: 14px 24px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    width: 100%;
-}
-
-.bottom-container a {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 
 
 
@@ -683,9 +503,22 @@ body {
     line-height: 1;
 }
 
+
+
+.cruise-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0px 0px 0px;
+    border: 1px solid rgba(13, 124, 134, 0.2);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
 .cruise-card {
     aspect-ratio: 16 / 9;
-    border-radius: 12px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
     overflow: hidden;
 }
 
@@ -693,17 +526,67 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scaleX(-1);
+}
+
+
+.cruise-experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 
 
+.icon-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
 
 
+.cruise-experience i {
+    font-size: 14px;
+    color: #0d7c86;
+    line-height: 1;
+}
 
 
+.cruise-experience p {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #0d7c86;
+}
 
 
+.cruise-container a {
+    text-decoration: none;
+}
+
+
+.cruises-button-container {
+    display: flex;
+    padding: 0px 24px 24px;
+}
+
+.cruises-button {
+    font-family: 'Geist', "Inter", sans-serif;
+    background-color: transparent;
+    border: 1px solid rgba(13, 124, 134, 0.4);
+    border-radius: 24px;
+    padding: 14px 24px;
+    color: #0d7c86;
+    font-size: 14px;
+    font-weight: 600;
+}
 
 
 

@@ -1,0 +1,5 @@
+﻿transfer-type,transfer-type-ar,car-model,car-model-ar,passengers-count,passengers-count-ar,baggage-count,baggage-count-ar,image-url,link-url,status
+Standard Transfer,سيارة قياسية,Toyota Corolla or similar,تويوتا كورولا أو ما يماثلها,3,٣,2,٢,https://res.cloudinary.com/dohlibogx/image/upload/v1793485766/standard-transfer_mz3iob.svg,transfers-search-form.html,active
+Luxury Transfer,سيارة فاخرة,Mercedes S-class or similar,مرسيدس الفئة إس أو ما يماثلها,3,٣,2,٢,https://res.cloudinary.com/dohlibogx/image/upload/v1793485766/luxury-transfer_onbrez.svg,transfers-search-form.html,active
+Minivan Transfer,ميني فان,Mercedes V-class or similar,مرسيدس الفئة في أو ما يماثلها,4,٤,3,٣,https://res.cloudinary.com/dohlibogx/image/upload/v1793485766/minivan-transfer_mijs48.svg,transfers-search-form.html,active
+Minibus Transfer,ميني باص,Mercedes Sprinter or similar,مرسيدس سبرينتر أو ما يماثلها,9,٩,6,٦,https://res.cloudinary.com/dohlibogx/image/upload/v1793485766/minibus-transfer_ue5c4b.svg,transfers-search-form.html,active

@@ -26,7 +26,7 @@ body {
     top: 0;
     z-index: 1000;
 
-    border-bottom: 1px solid rgba(13, 124, 134, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .navbar-content {
@@ -340,7 +340,7 @@ body {
     margin-right: 12px;
     box-sizing: border-box;
 
-    border: 1px solid rgba(13, 124, 134, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 24px;
     padding: 24px;
     display: flex;
@@ -510,7 +510,7 @@ body {
     flex-direction: column;
     gap: 0px;
     padding: 0px 0px 0px;
-    border: 1px solid rgba(13, 124, 134, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 24px;
     overflow: hidden;
 }
@@ -580,7 +580,7 @@ body {
 .cruises-button {
     font-family: 'Geist', "Inter", sans-serif;
     background-color: transparent;
-    border: 1px solid rgba(13, 124, 134, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 24px;
     padding: 14px 24px;
     color: #0d7c86;
@@ -606,7 +606,7 @@ body {
 
 .contact-us-card {
     padding: 24px;
-    border: 1px solid rgba(13, 124, 134, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 24px;
 
 }
@@ -641,7 +641,7 @@ body {
 .chat-button,
 .email-button {
     background-color: transparent;
-    border: 1px solid rgba(13, 124, 134, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 24px;
     padding: 14px 24px;
     color: #0d7c86;

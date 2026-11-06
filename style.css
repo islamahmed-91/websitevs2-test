@@ -58,6 +58,65 @@ body {
 
 
 
+/*SEARCH FORM*/
+.search-form-container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
+}
+
+
+
+.search-forms-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+.search-forms-cards a {
+    text-decoration: none;
+    width: 100%;
+}
+
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 12px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 24px;
+}
+
+.search-form i {
+    font-size: 24px;
+    color: #0d7c86;
+}
+
+.search-form p {
+    font-family: 'Geist', "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0d7c86;
+    margin: 0px;
+}
+
+
+
+
+
+
+
+
 
 
 
